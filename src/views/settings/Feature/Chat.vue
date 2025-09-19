@@ -83,6 +83,10 @@ export default {
           }
         },
         GPT_MODEL: {
+          type: 'input',
+          el: {
+            placeholder: '请输入GPT模型名称，如：gpt-3.5-turbo, gpt-4, gpt-4-turbo等'
+          },
           hidden: (formValue) => {
             return formValue.CHAT_AI_METHOD !== 'api' || formValue.CHAT_AI_TYPE !== 'gpt'
           }
